@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "HeiBa-Recruitment-DB",
+            "database": "${workspaceFolder:heiba-recruitment}/heiba-recruitment-system/database/heiba_recruitment.db"
+        }
+    ]
+}
