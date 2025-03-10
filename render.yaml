@@ -3,6 +3,7 @@ services:
     name: heiba-recruitment
     env: node
     plan: free
+    rootDir: .  # Dies weist Render an, das Hauptverzeichnis zu verwenden
     buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /
