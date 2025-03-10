@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     rootDir: .  # Dies weist Render an, das Hauptverzeichnis zu verwenden
-    buildCommand: yarn install && mkdir -p /opt/render/project/src && cp package.json /opt/render/project/src/ && yarn build
+    buildCommand: bash -c "yarn install && yarn build && mkdir -p /opt/render/project/src && cp -r .next node_modules package.json yarn.lock next.config.js public /opt/render/project/src/"
     startCommand: cd /opt/render/project/src && yarn start
     healthCheckPath: /
     envVars:
