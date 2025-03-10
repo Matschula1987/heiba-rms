@@ -1,0 +1,100 @@
+{
+  "site": {
+    "title": "HeiBa Darbā pieņemšanas sistēma",
+    "description": "Kandidātu pārvaldība HeiBa uzņēmumam"
+  },
+  "nav": {
+    "dashboard": "Panelis",
+    "jobs": "Darba vietas",
+    "candidates": "Kandidāti",
+    "applications": "Pieteikumi",
+    "talent_pool": "Talantu krātuve",
+    "matching": "Atbilstība",
+    "reports": "Pārskati",
+    "settings": "Iestatījumi",
+    "integrations": "Integrācijas",
+    "users": "Lietotāji"
+  },
+  "actions": {
+    "add": "Pievienot",
+    "edit": "Rediģēt",
+    "delete": "Dzēst",
+    "save": "Saglabāt",
+    "cancel": "Atcelt",
+    "confirm": "Apstiprināt",
+    "search": "Meklēt",
+    "filter": "Filtrēt",
+    "view": "Skatīt",
+    "back": "Atpakaļ",
+    "next": "Tālāk",
+    "submit": "Iesniegt",
+    "upload": "Augšupielādēt",
+    "download": "Lejupielādēt",
+    "export": "Eksportēt",
+    "import": "Importēt",
+    "refresh": "Atjaunināt"
+  },
+  "status": {
+    "success": "Veiksmīgi",
+    "error": "Kļūda",
+    "loading": "Ielāde",
+    "saving": "Saglabāšana",
+    "pending": "Gaida",
+    "active": "Aktīvs",
+    "inactive": "Neaktīvs",
+    "deleted": "Dzēsts",
+    "archived": "Arhivēts"
+  },
+  "common": {
+    "yes": "Jā",
+    "no": "Nē",
+    "or": "vai",
+    "and": "un",
+    "all": "Visi",
+    "none": "Neviens",
+    "more": "Vairāk",
+    "less": "Mazāk",
+    "name": "Vārds",
+    "email": "E-pasts",
+    "phone": "Tālrunis",
+    "address": "Adrese",
+    "city": "Pilsēta",
+    "zip": "Pasta indekss",
+    "country": "Valsts",
+    "date": "Datums",
+    "description": "Apraksts",
+    "notes": "Piezīmes",
+    "tags": "Birkas",
+    "details": "Detaļas",
+    "overview": "Pārskats",
+    "settings": "Iestatījumi"
+  },
+  "errors": {
+    "required": "Šis lauks ir obligāti jāaizpilda",
+    "invalid_email": "Lūdzu, ievadiet derīgu e-pasta adresi",
+    "invalid_phone": "Lūdzu, ievadiet derīgu tālruņa numuru",
+    "min_length": "Lūdzu, ievadiet vismaz {{count}} rakstzīmes",
+    "max_length": "Lūdzu, ievadiet ne vairāk kā {{count}} rakstzīmes",
+    "server_error": "Radās servera kļūda. Lūdzu, mēģiniet vēlāk.",
+    "not_found": "Pieprasītais resurss netika atrasts",
+    "permission_denied": "Jums nav atļaujas šai darbībai",
+    "already_exists": "Ieraksts ar šo nosaukumu jau pastāv",
+    "network_error": "Tīkla kļūda. Lūdzu, pārbaudiet savu interneta savienojumu."
+  },
+  "notifications": {
+    "success": "Veiksmīgi",
+    "error": "Kļūda",
+    "warning": "Brīdinājums",
+    "info": "Informācija"
+  },
+  "language": {
+    "de": "Vācu",
+    "en": "Angļu",
+    "ru": "Krievu",
+    "uk": "Ukraiņu",
+    "fr": "Franču",
+    "lv": "Latviešu",
+    "language_selector": "Izvēlieties valodu",
+    "current_language": "Pašreizējā valoda"
+  }
+}

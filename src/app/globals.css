@@ -1,76 +1,236 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+:root {
+  /* Hauptfarben des Systems */
+  --primary-dark: #05204A;  /* Dunkelblau - war vorher #154284 */
+  --primary-light: #082B5C; /* Helleres Blau für Farbverläufe */
+  --accent: #A67C00;        /* Dunkleres Gold - war vorher #BC932B */
+  --background: #f8f9fc;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  
+  /* Schatten und Effekte */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-diagonal: 0 -1px 1px rgba(255, 255, 255, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2);
+  --shadow-blue-inner: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.3);
+  --shadow-blue-diagonal: inset 0 -1px 1px rgba(255, 255, 255, 0.2), inset 1px 0 1px rgba(0, 0, 0, 0.2);
+  
+  /* Abgerundete Ecken */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 1rem;
+  --border-radius-full: 9999px;
+}
+
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
- 
-    --radius: 0.5rem;
+  html {
+    font-family: 'Segoe UI', system-ui, sans-serif;
   }
- 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
- 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
- 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
- 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
- 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
- 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
- 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+  
+  /* Einheitliche Button-Stile */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent
+           text-sm font-medium rounded-md shadow-sm text-white bg-[var(--primary-dark)]
+           hover:bg-[var(--primary-light)] focus:outline-none focus:ring-2
+           focus:ring-offset-2 focus:ring-[var(--accent)] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-[var(--primary-dark)] border border-gray-300
+           hover:bg-gray-50;
+  }
+  
+  .btn-accent {
+    @apply bg-[var(--accent)] hover:bg-[var(--accent)]/90;
+  }
+  
+  /* Einheitliche Kartenformatierung */
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+  
+  /* Einheitliche Eingabefelder */
+  .input-field {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+           placeholder-gray-400 focus:outline-none focus:ring-[var(--accent)] 
+           focus:border-[var(--accent)] sm:text-sm;
   }
 }
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+
+/* Grundlegende Variablen */
+:root {
+  /* HeiBa Farbschema - Originalversion */
+  --heiba-blue: #002451;
+  --heiba-gold: #B8860B;
+  --heiba-light-bg: #f5f5f5;
+  --heiba-text: #333333;
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+/* Grundlegende Stile */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Modernes Theme - HeiBa im neuen Look */
+.theme-modern {
+  /* HeiBa Farbschema - Modernisierte Version */
+  --heiba-blue: #154284;
+  --heiba-gold: #d4af37;
+  --heiba-light-bg: #f8fafc;
+  --heiba-text: #1e293b;
+}
+
+/* Allgemeines Dashboard-Styling - Original */
+.dashboard-container {
+  background-color: var(--heiba-light-bg);
+}
+
+/* ===== MODERNES LAYOUT ===== */
+
+/* Moderner Layout-Container */
+.theme-modern .dashboard-container {
+  background-color: white;
+}
+
+/* Sidebar-Styling im modernen Layout */
+.theme-modern .sidebar-alternative {
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Header-Bereich */
+.theme-modern .main-header {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Navigations-Items */
+.theme-modern .nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.theme-modern .nav-item:hover {
+  background-color: #f1f5f9;
+  color: var(--heiba-blue);
+}
+
+.theme-modern .nav-item.active {
+  background-color: #e2e8f0;
+  color: var(--heiba-blue);
+  font-weight: 500;
+}
+
+.theme-modern .nav-item i {
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+  color: #94a3b8;
+}
+
+.theme-modern .nav-item.active i {
+  color: var(--heiba-blue);
+}
+
+/* Modern-Layout-Header-Bereich */
+.theme-modern .header-section {
+  background-color: var(--heiba-gold);
+  color: var(--heiba-blue);
+  padding: 0.5rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Modern-Layout-Navbar-Bereich */
+.theme-modern .navbar-section {
+  background-color: var(--heiba-blue);
+  color: white;
+  padding: 1rem 0;
+}
+
+/* Top-Navigationsleiste im modernen Layout */
+.theme-modern .main-navigation {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.theme-modern .main-navigation a {
+  color: #64748b;
+  border-bottom: 2px solid transparent;
+}
+
+.theme-modern .main-navigation a:hover,
+.theme-modern .main-navigation a.active {
+  color: var(--heiba-blue);
+  border-bottom-color: var(--heiba-gold);
+}
+
+/* Buttons im modernen Layout */
+.theme-modern .btn-primary {
+  background-color: var(--heiba-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.theme-modern .btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Überschriften im modernen Layout */
+.theme-modern h1, .theme-modern h2 {
+  color: var(--heiba-blue);
+  font-weight: 700;
+}
+
+/* Karten im modernen Layout */
+.theme-modern .card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Gold-Akzente für wichtige Elemente */
+.theme-modern .gold-accent {
+  color: var(--heiba-gold);
+}
+
+.theme-modern .gold-border {
+  border-color: var(--heiba-gold);
+}
+
+.theme-modern .blue-bg {
+  background-color: var(--heiba-blue);
+  color: white;
 }

@@ -1,0 +1,99 @@
+{
+  "site": {
+    "title": "HeiBa Recruitment System",
+    "description": "Système de gestion des candidatures pour HeiBa"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "jobs": "Offres d'emploi",
+    "candidates": "Candidats",
+    "applications": "Candidatures",
+    "talent_pool": "Vivier de talents",
+    "matching": "Matching",
+    "reports": "Rapports",
+    "settings": "Paramètres",
+    "integrations": "Intégrations",
+    "users": "Utilisateurs"
+  },
+  "actions": {
+    "add": "Ajouter",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "upload": "Téléverser",
+    "download": "Télécharger",
+    "export": "Exporter",
+    "import": "Importer",
+    "refresh": "Actualiser"
+  },
+  "status": {
+    "success": "Succès",
+    "error": "Erreur",
+    "loading": "Chargement",
+    "saving": "Enregistrement",
+    "pending": "En attente",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "deleted": "Supprimé",
+    "archived": "Archivé"
+  },
+  "common": {
+    "yes": "Oui",
+    "no": "Non",
+    "or": "ou",
+    "and": "et",
+    "all": "Tous",
+    "none": "Aucun",
+    "more": "Plus",
+    "less": "Moins",
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "city": "Ville",
+    "zip": "Code postal",
+    "country": "Pays",
+    "date": "Date",
+    "description": "Description",
+    "notes": "Notes",
+    "tags": "Tags",
+    "details": "Détails",
+    "overview": "Aperçu",
+    "settings": "Paramètres"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "invalid_email": "Veuillez saisir une adresse e-mail valide",
+    "invalid_phone": "Veuillez saisir un numéro de téléphone valide",
+    "min_length": "Veuillez saisir au moins {{count}} caractères",
+    "max_length": "Veuillez saisir au maximum {{count}} caractères",
+    "server_error": "Une erreur de serveur s'est produite. Veuillez réessayer plus tard.",
+    "not_found": "La ressource demandée n'a pas été trouvée",
+    "permission_denied": "Vous n'avez pas l'autorisation pour cette action",
+    "already_exists": "Une entrée avec ce nom existe déjà",
+    "network_error": "Erreur réseau. Veuillez vérifier votre connexion Internet."
+  },
+  "notifications": {
+    "success": "Succès",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "info": "Information"
+  },
+  "language": {
+    "de": "Allemand",
+    "en": "Anglais",
+    "ru": "Russe",
+    "uk": "Ukrainien",
+    "fr": "Français",
+    "language_selector": "Sélectionner la langue",
+    "current_language": "Langue actuelle"
+  }
+}
