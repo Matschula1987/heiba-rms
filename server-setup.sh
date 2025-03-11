@@ -19,7 +19,7 @@ DATA_DIR="/data/heiba"
 # Domainname und Server-IP
 DOMAIN="heiba-rms.de"
 WWW_DOMAIN="www.heiba-rms.de"
-SERVER_IP="88.99.13.32"
+SERVER_IP="195.201.26.134"
 
 # Prüfen, ob das Skript als Root ausgeführt wird
 if [ "$(id -u)" != "0" ]; then
